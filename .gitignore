@@ -1,0 +1,15 @@
+.vscode/
+/src/.env
+
+/src/node_modules
+/src/vendor
+
+/src/public/storage
+
+/src/storage/framework/
+/src/storage/app/public
+/src/storage/logs/*.log
+
+/src/.phpunit.result.cache
+/src/bootstrap/cache/*
+!/src/bootstrap/cache/.gitignore
