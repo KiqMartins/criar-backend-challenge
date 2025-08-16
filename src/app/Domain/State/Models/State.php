@@ -11,4 +11,9 @@ class State extends Model
     use softDeletes;
     use HasFactory; 
     protected $fillable = ['name', 'state_code'];
+
+    public function cities()
+    {
+        return $this->hasMany(City::class);
+    }
 }
