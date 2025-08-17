@@ -21,6 +21,7 @@ class StoreCityRequest extends FormRequest
                 ),
             ],
             'state_id' => 'required|exists:states,id',
+            'cluster_id' => 'sometimes|exists:clusters,id'
         ];
     }
 }   

@@ -12,10 +12,15 @@ class City extends Model
     /** @use HasFactory<\Database\Factories\CityFactory> */
     use HasFactory;
     use softDeletes;
-    protected $fillable = ['name', 'state_id'];
+    protected $fillable = ['name', 'state_id', 'city_id', 'cluster_id'];
 
     public function state(): BelongsTo
     {
         return $this->belongsTo(State::class);
+    }
+
+    public function cluster(): BelongsTo
+    {
+        return $this->belongsTo(Cluster::class);
     }
 }

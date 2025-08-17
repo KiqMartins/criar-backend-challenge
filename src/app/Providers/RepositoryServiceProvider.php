@@ -7,6 +7,8 @@ use App\Domain\State\Contracts\StateRepositoryInterface;
 use App\Domain\State\Repositories\EloquentStateRepository;
 use App\Domain\City\Contracts\CityRepositoryInterface;
 use App\Domain\City\Repositories\EloquentCityRepository;
+use App\Domain\Cluster\Repositories\EloquentClusterRepository;
+use App\Domain\Cluster\Contracts\ClusterRepositoryInterface;
 
 class RepositoryServiceProvider extends ServiceProvider
 {
@@ -20,6 +22,11 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(
             StateRepositoryInterface::class,
             EloquentStateRepository::class
+        );
+
+        $this->app->bind(
+            ClusterRepositoryInterface::class,
+            EloquentClusterRepository::class
         );
     }
 }

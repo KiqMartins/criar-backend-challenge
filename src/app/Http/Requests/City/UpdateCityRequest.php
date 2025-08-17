@@ -26,6 +26,7 @@ class UpdateCityRequest extends FormRequest
                     ->ignore($cityId),
             ],
             'state_id' => 'required|exists:states,id',
+            'cluster_id' => 'sometimes|exists:clusters,id'
         ];
     }
 }
