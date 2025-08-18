@@ -30,6 +30,8 @@ class CampaignController extends Controller
 
     public function show(Campaign $campaign)
     {
+        $campaign->load(['cluster', 'discount']);
+
         return new CampaignResource($campaign);
     }
 

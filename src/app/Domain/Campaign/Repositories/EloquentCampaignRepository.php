@@ -16,7 +16,7 @@ class EloquentCampaignRepository implements CampaignRepositoryInterface
 
     public function find(int $id): ?Campaign
     {
-        return Campaign::find($id);
+        return Campaign::with('discount')->find($id);
     }
 
     public function create(array $data): Campaign

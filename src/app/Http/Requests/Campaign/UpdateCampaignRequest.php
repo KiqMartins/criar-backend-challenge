@@ -28,6 +28,7 @@ class UpdateCampaignRequest extends FormRequest
             ],
             'cluster_id' => ['prohibited'],
             'is_active' => ['sometimes', 'required', 'boolean'],
+            'discount_id' => ['nullable', 'integer', 'exists:discounts,id'],
         ];
     }
 }

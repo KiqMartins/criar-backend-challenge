@@ -23,6 +23,7 @@ class StoreCampaignRequest extends FormRequest
             ],
             'cluster_id' => ['required', 'integer', 'exists:clusters,id'],
             'is_active' => ['required', 'boolean'],
+            'discount_id' => ['nullable', 'integer', 'exists:discounts,id'],
         ];
     }
 }
