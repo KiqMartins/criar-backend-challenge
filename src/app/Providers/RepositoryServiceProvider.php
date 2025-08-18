@@ -9,6 +9,8 @@ use App\Domain\City\Contracts\CityRepositoryInterface;
 use App\Domain\City\Repositories\EloquentCityRepository;
 use App\Domain\Cluster\Repositories\EloquentClusterRepository;
 use App\Domain\Cluster\Contracts\ClusterRepositoryInterface;
+use App\Domain\Campaign\Repositories\EloquentCampaignRepository;
+use App\Domain\Campaign\Contracts\CampaignRepositoryInterface;
 
 class RepositoryServiceProvider extends ServiceProvider
 {
@@ -27,6 +29,11 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(
             ClusterRepositoryInterface::class,
             EloquentClusterRepository::class
+        );
+
+        $this->app->bind(
+            CampaignRepositoryInterface::class,
+            EloquentCampaignRepository::class
         );
     }
 }
