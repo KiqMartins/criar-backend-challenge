@@ -13,6 +13,8 @@ use App\Domain\Campaign\Repositories\EloquentCampaignRepository;
 use App\Domain\Campaign\Contracts\CampaignRepositoryInterface;
 use App\Domain\Discount\Contracts\DiscountRepositoryInterface;
 use App\Domain\Discount\Repositories\EloquentDiscountRepository;
+use App\Domain\Product\Contracts\ProductRepositoryInterface;
+use App\Domain\Product\Repositories\EloquentProductRepository;
 
 class RepositoryServiceProvider extends ServiceProvider
 {
@@ -41,6 +43,11 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(
             DiscountRepositoryInterface::class,
             EloquentDiscountRepository::class
+        );
+
+        $this->app->bind(
+            ProductRepositoryInterface::class,
+            EloquentProductRepository::class
         );
     }
 }
