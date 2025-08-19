@@ -18,7 +18,7 @@ O projeto foi estruturado seguindo princípios de Clean Architecture e Domain-Dr
 * **Repository Pattern:** A camada de acesso a dados é abstraída através de interfaces, permitindo que a lógica de negócio seja independente da implementação do banco de dados (Eloquent).
 * **DTOs (Data Transfer Objects):** `Form Requests` são utilizados para validação de entrada e `API Resources` para a transformação e padronização das respostas JSON.
 * **Injeção de Dependência:** O Service Container do Laravel é utilizado extensivamente para gerenciar as dependências e "amarrar" as interfaces às suas implementações concretas.
-* **Models** Embora o PHP possua o PSR-4 definindo a posição das models em App\Models, partiu-se de uma alternativa inserindo dentro da própria Domain da entidade.
+* **Models:** Embora o PHP possua o PSR-4 definindo a posição das models em App\Models, partiu-se de uma alternativa inserindo dentro da própria Domain da entidade.
 
 ---
 
